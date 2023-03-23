@@ -64,6 +64,15 @@ static NSString *rootViewControllerIdentifier = @"SMRootViewControllerCell";
     [super viewWillAppear:animated];
     [self.tableView reloadData];
 }
+
+- (void)injected {
+    #if DEBUG
+    
+    [self viewDidLoad];
+
+    #endif
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     //Notification
